@@ -15,7 +15,7 @@ RUN chsh -s /bin/zsh
 
 # C++,node.js,npmの環境設定
 RUN apt-get update && \
-    apt-get install -y gcc-9 g++-9 python3.8 python3-pip nodejs npm
+    apt-get install -y gcc-9 g++-9 python3.8 python3-pip nodejs npm gdb
 
 # コマンド設定
 RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 30 && \
