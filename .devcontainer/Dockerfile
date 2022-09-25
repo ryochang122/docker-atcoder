@@ -23,8 +23,14 @@ RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 30 && \
     update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 30 && \
     update-alternatives --install /usr/bin/node node /usr/bin/nodejs 30
 
+# コンテスト補助ツールのインストール
 RUN pip install online-judge-tools==11.3.0
 RUN npm install -g atcoder-cli@2.1.1
+
+# atcoder-cliの設定
+RUN acc config-dir && \
+    acc config default-template cpp && \
+    acc config default-test-dirname-format test
 
 WORKDIR /root/problems
 WORKDIR /root/library

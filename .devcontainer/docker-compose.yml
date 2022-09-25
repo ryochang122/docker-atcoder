@@ -14,9 +14,7 @@ services:
       - ../problems:/root/problems:cached
       - ../library:/root/library:cached
       - ../.vscode:/root/.vscode:cached
-    # online-judge-toolsとatocder-cliのコンフィグ・セッション情報
-    #   - ../.login:/root/.login
-    #   - ../atcoder-cli-nodejs:/root/.config/atcoder-cli-nodejs
+      - ../acc-template-cpp:/root/.config/atcoder-cli-nodejs/cpp:cached
 
     # オプション これらのconfigファイルが必要なければコメントアウト
     #  - ../dotfiles/.zshrc:/root/.zshrc
