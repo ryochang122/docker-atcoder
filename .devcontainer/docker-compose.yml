@@ -13,8 +13,8 @@ services:
     volumes:
       - ../problems:/root/problems:cached
       - ../library:/root/library:cached
-      - ../.vscode:/root/.vscode:cached
       - ../acc-template-cpp:/root/.config/atcoder-cli-nodejs/cpp:cached
+      - ../.vscode:/root/.vscode:cached
 
     # オプション これらのconfigファイルが必要なければコメントアウト
     #  - ../dotfiles/.zshrc:/root/.zshrc
